@@ -1,0 +1,56 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "es6": true
+    },
+    "extends": [
+        "prettier",
+        "airbnb/base",
+        "eslint-config-prettier",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "requireConfigFile": false,
+        "ecmaVersion": 8,
+        "sourceType": "module"
+
+    },
+
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "eslint-plugin-prettier"
+    ],
+    "rules": {
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": 0,
+        "import/prefer-default-export": "off",
+        "import/no-default-export": "error",
+        "import/no-unresolved": 0,
+        "no-underscore-dangle": ["error", { "allow": ["__typename"] }],
+        "@typescript-eslint/no-unused-vars": [2, { "args": "none" }],
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+        "import/extensions": ["error", "ignorePackages", {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never",
+            "mjs": "never"
+        }]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
+            }
+        }
+    }
+}
+

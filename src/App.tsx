@@ -1,20 +1,14 @@
-import React from 'react';
-import styled from 'styled-components'
-import {GlobalStyle} from "./assets/styles/global";
+import React from 'react'
+import { GlobalStyle } from './styles/global'
+import { Header } from './components/Header'
+import { Dashboard } from './components/Dashboard'
 
-const Title = styled.h1`
-  color: #8257e6;
-  font-size: 34px;
-`
-function App() {
+export function App() {
   return (
-    <div className="App">
-        <Title>
-            <h1 className='title'>Hello word </h1>
-        </Title>
-        <GlobalStyle/>
-    </div>
-  );
+    <>
+      <Header />
+      <Dashboard />
+      <GlobalStyle />
+    </>
+  )
 }
-
-export default App;
